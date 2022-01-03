@@ -1,90 +1,66 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>字符串经典问题 | 一个不正经的博客</title>
-    <meta name="description" content="By Songfengshuai">
-    <link rel="stylesheet" href="/assets/style.cfcc141e.css">
-    <link rel="modulepreload" href="/assets/Home.d6467ff7.js">
-    <link rel="modulepreload" href="/assets/app.b9cbff89.js">
-    <link rel="modulepreload" href="/assets/leetcode_String_index.md.f7619108.lean.js">
-    <link rel="modulepreload" href="/assets/app.b9cbff89.js">
-    <link rel="icon" href="/favicon.png">
-    <meta name="theme-color" content="#3eaf7c">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-152x152.png">
-    <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#3eaf7c">
-    <meta name="msapplication-TileImage" content="/icons/msapplication-icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="twitter:title" content="字符串经典问题 | 一个不正经的博客">
-    <meta property="og:title" content="字符串经典问题 | 一个不正经的博客">
-  </head>
-  <body>
-    <div id="app"><!--[--><div class="theme"><header class="nav-bar" data-v-675d8756><div class="sidebar-button" data-v-675d8756><svg class="icon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z" class></path></svg></div><a class="nav-bar-title" href="/" aria-label="一个不正经的博客, back to home" data-v-675d8756 data-v-4a583abe><!----> 一个不正经的博客</a><div class="flex-grow" data-v-675d8756></div><div class="nav" data-v-675d8756><nav class="nav-links" data-v-675d8756 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview/" data-v-b8818f8c>前端面试汇总 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-dropdown-link" data-v-eab3edfe data-v-56bf3a3f><button class="button" data-v-56bf3a3f><span class="button-text" data-v-56bf3a3f>数据结构与算法</span><span class="right button-arrow" data-v-56bf3a3f></span></button><ul class="dialog" data-v-56bf3a3f><!--[--><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/data-structure/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>数据结构</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item active" href="/leetcode/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>leetcode</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><!--]--></ul></div></div><div class="item" data-v-eab3edfe><div class="nav-dropdown-link" data-v-eab3edfe data-v-56bf3a3f><button class="button" data-v-56bf3a3f><span class="button-text" data-v-56bf3a3f>前端工程化</span><span class="right button-arrow" data-v-56bf3a3f></span></button><ul class="dialog" data-v-56bf3a3f><!--[--><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/project/cli/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>脚手架</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/project/gui/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>GUI</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/project/publish/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>自动化发布</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/project/test/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>自动化测试</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><!--]--></ul></div></div><div class="item" data-v-eab3edfe><div class="nav-dropdown-link" data-v-eab3edfe data-v-56bf3a3f><button class="button" data-v-56bf3a3f><span class="button-text" data-v-56bf3a3f>Typescript</span><span class="right button-arrow" data-v-56bf3a3f></span></button><ul class="dialog" data-v-56bf3a3f><!--[--><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/typescript/basics/index" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>Typescript基础</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/typescript/senior/index" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>Typescript进阶</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><!--]--></ul></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/vue-analysis/" data-v-b8818f8c>Vue源码解析 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/react-analysis/" data-v-b8818f8c>React源码解析 <!----></a></div></div><!--]--><!----><!----></nav></div><!--[--><!--]--></header><aside class="sidebar" data-v-83e92a68><nav class="nav-links nav" data-v-83e92a68 data-v-eab3edfe><!--[--><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/interview/" data-v-b8818f8c>前端面试汇总 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-dropdown-link" data-v-eab3edfe data-v-56bf3a3f><button class="button" data-v-56bf3a3f><span class="button-text" data-v-56bf3a3f>数据结构与算法</span><span class="right button-arrow" data-v-56bf3a3f></span></button><ul class="dialog" data-v-56bf3a3f><!--[--><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/data-structure/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>数据结构</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item active" href="/leetcode/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>leetcode</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><!--]--></ul></div></div><div class="item" data-v-eab3edfe><div class="nav-dropdown-link" data-v-eab3edfe data-v-56bf3a3f><button class="button" data-v-56bf3a3f><span class="button-text" data-v-56bf3a3f>前端工程化</span><span class="right button-arrow" data-v-56bf3a3f></span></button><ul class="dialog" data-v-56bf3a3f><!--[--><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/project/cli/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>脚手架</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/project/gui/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>GUI</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/project/publish/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>自动化发布</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/project/test/" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>自动化测试</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><!--]--></ul></div></div><div class="item" data-v-eab3edfe><div class="nav-dropdown-link" data-v-eab3edfe data-v-56bf3a3f><button class="button" data-v-56bf3a3f><span class="button-text" data-v-56bf3a3f>Typescript</span><span class="right button-arrow" data-v-56bf3a3f></span></button><ul class="dialog" data-v-56bf3a3f><!--[--><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/typescript/basics/index" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>Typescript基础</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><li class="dialog-item" data-v-56bf3a3f><div class="nav-dropdown-link-item" data-v-56bf3a3f data-v-bbc27490><a class="item" href="/typescript/senior/index" data-v-bbc27490><span class="arrow" data-v-bbc27490></span><span class="text" data-v-bbc27490>Typescript进阶</span><span class="icon" data-v-bbc27490><!----></span></a></div></li><!--]--></ul></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/vue-analysis/" data-v-b8818f8c>Vue源码解析 <!----></a></div></div><div class="item" data-v-eab3edfe><div class="nav-link" data-v-eab3edfe data-v-b8818f8c><a class="item" href="/react-analysis/" data-v-b8818f8c>React源码解析 <!----></a></div></div><!--]--><!----><!----></nav><!--[--><!--]--><ul class="sidebar-links" data-v-83e92a68><!--[--><li class="sidebar-link"><a class="sidebar-link-item" href="/leetcode/Stack/index">栈</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/leetcode/String/index">字符串</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/leetcode/Array/index">数组</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/leetcode/Queue/index">队列</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/leetcode/LikedList/index">链表</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/leetcode/Sort/index">排序算法</a><!----></li><li class="sidebar-link"><a class="sidebar-link-item" href="/leetcode/Tree/index">树</a><!----></li><!--]--></ul><!--[--><!--]--></aside><!-- TODO: make this button accessible --><div class="sidebar-mask"></div><main class="page" data-v-7eddb2c4><div class="container" data-v-7eddb2c4><!--[--><!--]--><div style="position:relative;" class="content" data-v-7eddb2c4><div><h1 id="字符串经典问题" tabindex="-1">字符串经典问题 <a class="header-anchor" href="#字符串经典问题" aria-hidden="true">#</a></h1><h3 id="_3-无重复字符的最长子串" tabindex="-1">3.无重复字符的最长子串 <a class="header-anchor" href="#_3-无重复字符的最长子串" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
+import{_ as n,c as s,o as a,a as p}from"./app.b9cbff89.js";const f='{"title":"\u5B57\u7B26\u4E32\u7ECF\u5178\u95EE\u9898","description":"","frontmatter":{},"headers":[{"level":3,"title":"3.\u65E0\u91CD\u590D\u5B57\u7B26\u7684\u6700\u957F\u5B50\u4E32","slug":"_3-\u65E0\u91CD\u590D\u5B57\u7B26\u7684\u6700\u957F\u5B50\u4E32"},{"level":3,"title":"8.\u5B57\u7B26\u4E32\u8F6C\u6362\u6574\u6570","slug":"_8-\u5B57\u7B26\u4E32\u8F6C\u6362\u6574\u6570"},{"level":3,"title":"9.\u56DE\u6587\u6570","slug":"_9-\u56DE\u6587\u6570"},{"level":3,"title":"20.\u6709\u6548\u7684\u62EC\u53F7","slug":"_20-\u6709\u6548\u7684\u62EC\u53F7"},{"level":3,"title":"30.\u4E32\u8054\u6240\u6709\u5355\u8BCD\u7684\u5B50\u4E32","slug":"_30-\u4E32\u8054\u6240\u6709\u5355\u8BCD\u7684\u5B50\u4E32"},{"level":3,"title":"49. \u5B57\u6BCD\u7684\u5F02\u4F4D\u8BCD","slug":"_49-\u5B57\u6BCD\u7684\u5F02\u4F4D\u8BCD"},{"level":3,"title":"242. \u6709\u6548\u7684\u5B57\u6BCD\u5F02\u4F4D\u8BCD","slug":"_242-\u6709\u6548\u7684\u5B57\u6BCD\u5F02\u4F4D\u8BCD"},{"level":3,"title":"\u5251\u6307Offer 05. \u66FF\u6362\u7A7A\u683C","slug":"\u5251\u6307offer-05-\u66FF\u6362\u7A7A\u683C"},{"level":3,"title":"387.\u5B57\u7B26\u4E32\u4E2D\u7B2C\u4E00\u4E2A\u552F\u4E00\u5B57\u7B26","slug":"_387-\u5B57\u7B26\u4E32\u4E2D\u7B2C\u4E00\u4E2A\u552F\u4E00\u5B57\u7B26"}],"relativePath":"leetcode/String/index.md","lastUpdated":1641222416138}',t={},o=p(`<h1 id="\u5B57\u7B26\u4E32\u7ECF\u5178\u95EE\u9898" tabindex="-1">\u5B57\u7B26\u4E32\u7ECF\u5178\u95EE\u9898 <a class="header-anchor" href="#\u5B57\u7B26\u4E32\u7ECF\u5178\u95EE\u9898" aria-hidden="true">#</a></h1><h3 id="_3-\u65E0\u91CD\u590D\u5B57\u7B26\u7684\u6700\u957F\u5B50\u4E32" tabindex="-1">3.\u65E0\u91CD\u590D\u5B57\u7B26\u7684\u6700\u957F\u5B50\u4E32 <a class="header-anchor" href="#_3-\u65E0\u91CD\u590D\u5B57\u7B26\u7684\u6700\u957F\u5B50\u4E32" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
  * @param {string} s
  * @return {number}
  */</span>
 <span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">lengthOfLongestSubstring</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">s</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// 定义一个字典</span>
+    <span class="token comment">// \u5B9A\u4E49\u4E00\u4E2A\u5B57\u5178</span>
     <span class="token keyword">const</span> window <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
 
     <span class="token keyword">let</span> left <span class="token operator">=</span> <span class="token number">0</span>
     <span class="token keyword">let</span> right <span class="token operator">=</span> <span class="token number">0</span>
-    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment">// 记录结果</span>
+    <span class="token keyword">let</span> res <span class="token operator">=</span> <span class="token number">0</span> <span class="token comment">// \u8BB0\u5F55\u7ED3\u679C</span>
     <span class="token keyword">while</span> <span class="token punctuation">(</span>right <span class="token operator">&lt;</span> s<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
       <span class="token keyword">const</span> c <span class="token operator">=</span> s<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
       right<span class="token operator">++</span>
-      <span class="token comment">// 进行窗口内数据的一系列更新</span>
+      <span class="token comment">// \u8FDB\u884C\u7A97\u53E3\u5185\u6570\u636E\u7684\u4E00\u7CFB\u5217\u66F4\u65B0</span>
       <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>window<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token punctuation">)</span> window<span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
       window<span class="token punctuation">[</span>c<span class="token punctuation">]</span><span class="token operator">++</span>
-      <span class="token comment">// 判断左侧窗口是否要收缩</span>
+      <span class="token comment">// \u5224\u65AD\u5DE6\u4FA7\u7A97\u53E3\u662F\u5426\u8981\u6536\u7F29</span>
       <span class="token keyword">while</span> <span class="token punctuation">(</span>window<span class="token punctuation">[</span>c<span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">const</span> d <span class="token operator">=</span> s<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
         left<span class="token operator">++</span>
-        <span class="token comment">// 进行窗口内数据的一系列更新</span>
+        <span class="token comment">// \u8FDB\u884C\u7A97\u53E3\u5185\u6570\u636E\u7684\u4E00\u7CFB\u5217\u66F4\u65B0</span>
         <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>window<span class="token punctuation">[</span>d<span class="token punctuation">]</span><span class="token punctuation">)</span> window<span class="token punctuation">[</span>d<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span>
         window<span class="token punctuation">[</span>d<span class="token punctuation">]</span><span class="token operator">--</span>
       <span class="token punctuation">}</span>
-      <span class="token comment">// 在这里更新答案</span>
+      <span class="token comment">// \u5728\u8FD9\u91CC\u66F4\u65B0\u7B54\u6848</span>
       res <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">max</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> right <span class="token operator">-</span> left<span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> res
   <span class="token punctuation">}</span>
-</code></pre></div><h3 id="_8-字符串转换整数" tabindex="-1">8.字符串转换整数 <a class="header-anchor" href="#_8-字符串转换整数" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
+</code></pre></div><h3 id="_8-\u5B57\u7B26\u4E32\u8F6C\u6362\u6574\u6570" tabindex="-1">8.\u5B57\u7B26\u4E32\u8F6C\u6362\u6574\u6570 <a class="header-anchor" href="#_8-\u5B57\u7B26\u4E32\u8F6C\u6362\u6574\u6570" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
  * @param {string} s
  * @return {number}
  */</span>
 <span class="token keyword">export</span> <span class="token keyword">const</span> <span class="token function-variable function">myAtoi</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">s</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token comment">// Infinity不能参与运算，只能先这样定义好</span>
+    <span class="token comment">// Infinity\u4E0D\u80FD\u53C2\u4E0E\u8FD0\u7B97\uFF0C\u53EA\u80FD\u5148\u8FD9\u6837\u5B9A\u4E49\u597D</span>
     <span class="token keyword">const</span> max <span class="token operator">=</span> <span class="token number">2147483647</span>
     <span class="token keyword">const</span> min <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">2147483648</span>
-    <span class="token comment">// 创建index指针</span>
+    <span class="token comment">// \u521B\u5EFAindex\u6307\u9488</span>
     <span class="token keyword">let</span> index <span class="token operator">=</span> <span class="token number">0</span>
-    <span class="token comment">// 创建符号</span>
+    <span class="token comment">// \u521B\u5EFA\u7B26\u53F7</span>
     <span class="token keyword">let</span> sign <span class="token operator">=</span> <span class="token number">1</span>
-    <span class="token comment">// 创建结果</span>
+    <span class="token comment">// \u521B\u5EFA\u7ED3\u679C</span>
     <span class="token keyword">let</span> total <span class="token operator">=</span> <span class="token number">0</span>
 
-    <span class="token comment">// 边界处理</span>
+    <span class="token comment">// \u8FB9\u754C\u5904\u7406</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span>
 
-    <span class="token comment">// 删除多余的空格,指针往前走</span>
+    <span class="token comment">// \u5220\u9664\u591A\u4F59\u7684\u7A7A\u683C,\u6307\u9488\u5F80\u524D\u8D70</span>
     <span class="token keyword">while</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">&#39; &#39;</span> <span class="token operator">&amp;&amp;</span> index <span class="token operator">&lt;</span> s<span class="token punctuation">.</span>length<span class="token punctuation">)</span> index<span class="token operator">++</span>
 
-    <span class="token comment">// 处理正负号</span>
+    <span class="token comment">// \u5904\u7406\u6B63\u8D1F\u53F7</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">&#39;+&#39;</span> <span class="token operator">||</span> s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">&#39;-&#39;</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
       sign <span class="token operator">=</span> s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token operator">===</span> <span class="token string">&#39;+&#39;</span> <span class="token operator">?</span> <span class="token number">1</span> <span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span>
       index<span class="token operator">++</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">while</span> <span class="token punctuation">(</span>index <span class="token operator">&lt;</span> s<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment">// 空字符串会被当做0</span>
+      <span class="token comment">// \u7A7A\u5B57\u7B26\u4E32\u4F1A\u88AB\u5F53\u505A0</span>
       <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">.</span>charAt <span class="token operator">===</span> <span class="token string">&#39; &#39;</span><span class="token punctuation">)</span> <span class="token keyword">break</span>
       <span class="token keyword">const</span> digit <span class="token operator">=</span> <span class="token function">Number</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span><span class="token punctuation">)</span>
-      <span class="token comment">// 不是数字到下个字符</span>
+      <span class="token comment">// \u4E0D\u662F\u6570\u5B57\u5230\u4E0B\u4E2A\u5B57\u7B26</span>
       <span class="token keyword">if</span> <span class="token punctuation">(</span>digit <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">||</span> digit <span class="token operator">&gt;</span> <span class="token number">9</span> <span class="token operator">||</span> <span class="token function">isNaN</span><span class="token punctuation">(</span>digit<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">break</span>
-      <span class="token comment">// 边界处理</span>
+      <span class="token comment">// \u8FB9\u754C\u5904\u7406</span>
       <span class="token keyword">if</span> <span class="token punctuation">(</span>max <span class="token operator">/</span> <span class="token number">10</span> <span class="token operator">&lt;</span> total <span class="token operator">||</span> <span class="token punctuation">(</span>Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>max <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span> <span class="token operator">===</span> total <span class="token operator">&amp;&amp;</span> max <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">&lt;</span> digit<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
         <span class="token keyword">return</span> sign <span class="token operator">===</span> <span class="token number">1</span> <span class="token operator">?</span> max <span class="token operator">:</span> min
       <span class="token punctuation">}</span>
@@ -94,7 +70,7 @@
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> total <span class="token operator">*</span> sign
   <span class="token punctuation">}</span>
-</code></pre></div><h3 id="_9-回文数" tabindex="-1">9.回文数 <a class="header-anchor" href="#_9-回文数" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
+</code></pre></div><h3 id="_9-\u56DE\u6587\u6570" tabindex="-1">9.\u56DE\u6587\u6570 <a class="header-anchor" href="#_9-\u56DE\u6587\u6570" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
  * @param {number} x
  * @return {boolean}
  */</span>
@@ -113,7 +89,7 @@
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isPalindrome</span><span class="token punctuation">(</span><span class="token number">121</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-</code></pre></div><h3 id="_20-有效的括号" tabindex="-1">20.有效的括号 <a class="header-anchor" href="#_20-有效的括号" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
+</code></pre></div><h3 id="_20-\u6709\u6548\u7684\u62EC\u53F7" tabindex="-1">20.\u6709\u6548\u7684\u62EC\u53F7 <a class="header-anchor" href="#_20-\u6709\u6548\u7684\u62EC\u53F7" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
  * @param {string} s
  * @return {boolean}
  */</span>
@@ -133,7 +109,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> stack<span class="token punctuation">.</span>length <span class="token operator">===</span> <span class="token number">0</span>
   <span class="token punctuation">}</span>
-</code></pre></div><h3 id="_30-串联所有单词的子串" tabindex="-1">30.串联所有单词的子串 <a class="header-anchor" href="#_30-串联所有单词的子串" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
+</code></pre></div><h3 id="_30-\u4E32\u8054\u6240\u6709\u5355\u8BCD\u7684\u5B50\u4E32" tabindex="-1">30.\u4E32\u8054\u6240\u6709\u5355\u8BCD\u7684\u5B50\u4E32 <a class="header-anchor" href="#_30-\u4E32\u8054\u6240\u6709\u5355\u8BCD\u7684\u5B50\u4E32" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
  * @param {string} s
  * @param {string[]} words
  * @return {number[]}
@@ -172,7 +148,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token punctuation">}</span>
 
 <span class="token comment">/**
- * 判断两个map是否一样
+ * \u5224\u65AD\u4E24\u4E2Amap\u662F\u5426\u4E00\u6837
  * @param {Map&lt;string, number&gt;} a
  * @param {Map&lt;string, number&gt;} b
  * @returns {undefined}
@@ -190,31 +166,31 @@ console<span class="token punctuation">.</span><span class="token function">log<
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">findSubstring</span><span class="token punctuation">(</span><span class="token string">&#39;barfoothefoobarman&#39;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&#39;foo&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;bar&#39;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">findSubstring</span><span class="token punctuation">(</span><span class="token string">&#39;wordgoodgoodgoodbestword&#39;</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">&#39;word&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;good&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;best&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;word&#39;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-</code></pre></div><h3 id="_49-字母的异位词" tabindex="-1">49. 字母的异位词 <a class="header-anchor" href="#_49-字母的异位词" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
+</code></pre></div><h3 id="_49-\u5B57\u6BCD\u7684\u5F02\u4F4D\u8BCD" tabindex="-1">49. \u5B57\u6BCD\u7684\u5F02\u4F4D\u8BCD <a class="header-anchor" href="#_49-\u5B57\u6BCD\u7684\u5F02\u4F4D\u8BCD" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
  * @param {string[]} strs
  * @return {string[][]}
  */</span>
 <span class="token keyword">const</span> <span class="token function-variable function">groupAnagrams</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">strs</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> map <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Map</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">const</span> str <span class="token keyword">of</span> strs<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token comment">// 1. 把字符串分割成数组</span>
+      <span class="token comment">// 1. \u628A\u5B57\u7B26\u4E32\u5206\u5272\u6210\u6570\u7EC4</span>
       <span class="token keyword">const</span> array <span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>
-      <span class="token comment">// 2. 进行排序，这样异位词的key一定一样的</span>
+      <span class="token comment">// 2. \u8FDB\u884C\u6392\u5E8F\uFF0C\u8FD9\u6837\u5F02\u4F4D\u8BCD\u7684key\u4E00\u5B9A\u4E00\u6837\u7684</span>
       array<span class="token punctuation">.</span><span class="token function">sort</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
       <span class="token keyword">const</span> key <span class="token operator">=</span> array<span class="token punctuation">.</span><span class="token function">toString</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-      <span class="token comment">// 判断是否有，创建数组</span>
+      <span class="token comment">// \u5224\u65AD\u662F\u5426\u6709\uFF0C\u521B\u5EFA\u6570\u7EC4</span>
       <span class="token keyword">const</span> list <span class="token operator">=</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">?</span> map<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-      <span class="token comment">// 往对应的数组里面push</span>
+      <span class="token comment">// \u5F80\u5BF9\u5E94\u7684\u6570\u7EC4\u91CC\u9762push</span>
       list<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>str<span class="token punctuation">)</span>
-      <span class="token comment">// 存储数据</span>
+      <span class="token comment">// \u5B58\u50A8\u6570\u636E</span>
       map<span class="token punctuation">.</span><span class="token function">set</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> list<span class="token punctuation">)</span>
     <span class="token punctuation">}</span>
-    <span class="token comment">// map转数组</span>
+    <span class="token comment">// map\u8F6C\u6570\u7EC4</span>
     <span class="token keyword">return</span> Array<span class="token punctuation">.</span><span class="token function">from</span><span class="token punctuation">(</span>map<span class="token punctuation">.</span><span class="token function">values</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
   <span class="token punctuation">}</span>
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">groupAnagrams</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&#39;eat&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;tea&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;tan&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;ate&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;nat&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;bat&#39;</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-</code></pre></div><h3 id="_242-有效的字母异位词" tabindex="-1">242. 有效的字母异位词 <a class="header-anchor" href="#_242-有效的字母异位词" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
+</code></pre></div><h3 id="_242-\u6709\u6548\u7684\u5B57\u6BCD\u5F02\u4F4D\u8BCD" tabindex="-1">242. \u6709\u6548\u7684\u5B57\u6BCD\u5F02\u4F4D\u8BCD <a class="header-anchor" href="#_242-\u6709\u6548\u7684\u5B57\u6BCD\u5F02\u4F4D\u8BCD" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
  * @param {string} s
  * @param {string} t
  * @return {boolean}
@@ -235,8 +211,8 @@ console<span class="token punctuation">.</span><span class="token function">log<
 
 console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">isAnagram</span><span class="token punctuation">(</span><span class="token string">&#39;rat&#39;</span><span class="token punctuation">,</span> <span class="token string">&#39;car&#39;</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
 
-</code></pre></div><h3 id="剑指offer-05-替换空格" tabindex="-1">剑指Offer 05. 替换空格 <a class="header-anchor" href="#剑指offer-05-替换空格" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
- * 请实现一个函数，把字符串 s 中的每个空格替换成&quot;%20&quot;。
+</code></pre></div><h3 id="\u5251\u6307offer-05-\u66FF\u6362\u7A7A\u683C" tabindex="-1">\u5251\u6307Offer 05. \u66FF\u6362\u7A7A\u683C <a class="header-anchor" href="#\u5251\u6307offer-05-\u66FF\u6362\u7A7A\u683C" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
+ * \u8BF7\u5B9E\u73B0\u4E00\u4E2A\u51FD\u6570\uFF0C\u628A\u5B57\u7B26\u4E32 s \u4E2D\u7684\u6BCF\u4E2A\u7A7A\u683C\u66FF\u6362\u6210&quot;%20&quot;\u3002
  * @param {string} s
  * @return {string}
  */</span>
@@ -252,7 +228,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token keyword">return</span> result
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-</code></pre></div><h3 id="_387-字符串中第一个唯一字符" tabindex="-1">387.字符串中第一个唯一字符 <a class="header-anchor" href="#_387-字符串中第一个唯一字符" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
+</code></pre></div><h3 id="_387-\u5B57\u7B26\u4E32\u4E2D\u7B2C\u4E00\u4E2A\u552F\u4E00\u5B57\u7B26" tabindex="-1">387.\u5B57\u7B26\u4E32\u4E2D\u7B2C\u4E00\u4E2A\u552F\u4E00\u5B57\u7B26 <a class="header-anchor" href="#_387-\u5B57\u7B26\u4E32\u4E2D\u7B2C\u4E00\u4E2A\u552F\u4E00\u5B57\u7B26" aria-hidden="true">#</a></h3><div class="language-javascript"><pre><code><span class="token comment">/**
  * @param {string} s
  * @return {number}
  */</span>
@@ -270,9 +246,4 @@ console<span class="token punctuation">.</span><span class="token function">log<
     <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
   <span class="token punctuation">}</span>
 
-</code></pre></div></div></div><footer class="page-footer" data-v-7eddb2c4 data-v-fb8d84c6><div class="edit" data-v-fb8d84c6><div class="edit-link" data-v-fb8d84c6 data-v-1ed99556><!----></div></div><div class="updated" data-v-fb8d84c6><p class="last-updated" data-v-fb8d84c6 data-v-5797b537><span class="prefix" data-v-5797b537>上次编辑时间:</span><span class="datetime" data-v-5797b537></span></p></div></footer><div class="next-and-prev-link" data-v-7eddb2c4 data-v-38ede35f><div class="container" data-v-38ede35f><div class="prev" data-v-38ede35f><a class="link" href="/leetcode/Stack/" data-v-38ede35f><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-prev" data-v-38ede35f><path d="M19,11H7.4l5.3-5.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-7,7c-0.1,0.1-0.2,0.2-0.2,0.3c-0.1,0.2-0.1,0.5,0,0.8c0.1,0.1,0.1,0.2,0.2,0.3l7,7c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L7.4,13H19c0.6,0,1-0.4,1-1S19.6,11,19,11z"></path></svg><span class="text" data-v-38ede35f>栈</span></a></div><div class="next" data-v-38ede35f><a class="link" href="/leetcode/Array/" data-v-38ede35f><span class="text" data-v-38ede35f>数组</span><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" class="icon icon-next" data-v-38ede35f><path d="M19.9,12.4c0.1-0.2,0.1-0.5,0-0.8c-0.1-0.1-0.1-0.2-0.2-0.3l-7-7c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.3,5.3H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.6l-5.3,5.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7-7C19.8,12.6,19.9,12.5,19.9,12.4z"></path></svg></a></div></div></div><!--[--><!--]--></div></main></div><!----><!--]--></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"data-structure_index.md\":\"e97e9955\",\"index.md\":\"4af70923\",\"interview_index.md\":\"2ab6287b\",\"leetcode_array_index.md\":\"27f5f871\",\"leetcode_likedlist_index.md\":\"ed76df2a\",\"leetcode_queue_index.md\":\"1c4e7835\",\"leetcode_sort_doc_冒泡排序.md\":\"02e0bb24\",\"leetcode_sort_doc_希尔排序.md\":\"713e6426\",\"leetcode_sort_doc_归并排序.md\":\"d9364e58\",\"leetcode_sort_doc_快速排序.md\":\"b19f2648\",\"leetcode_sort_doc_插入排序.md\":\"bc5ac1d0\",\"leetcode_sort_doc_选择排序.md\":\"764db713\",\"leetcode_sort_index.md\":\"f3436cfd\",\"leetcode_stack_index.md\":\"8898b94d\",\"leetcode_string_index.md\":\"f7619108\",\"leetcode_tree_index.md\":\"56f6c7d3\",\"leetcode_index.md\":\"c78b05c0\",\"project_cli_index.md\":\"49ff4551\",\"project_ui_index.md\":\"6b963e14\",\"react-analysis_index.md\":\"ee961a51\",\"typescript_basics_index.md\":\"cfd66ffd\",\"vue-analysis_index.md\":\"536330aa\"}")</script>
-    <script type="module" async src="/assets/app.b9cbff89.js"></script>
-    
-  </body>
-</html>
+</code></pre></div>`,19),e=[o];function c(u,l,k,r,i,d){return a(),s("div",null,e)}var w=n(t,[["render",c]]);export{f as __pageData,w as default};
