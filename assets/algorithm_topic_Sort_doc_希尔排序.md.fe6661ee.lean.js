@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as a,d as i}from"./app.4fc031e0.js";const f='{"title":"\u5E0C\u5C14\u6392\u5E8F","description":"","frontmatter":{},"relativePath":"algorithm/topic/Sort/doc/\u5E0C\u5C14\u6392\u5E8F.md","lastUpdated":1641395324516}',l={},o=i("",5),_=[o];function r(c,n,d,s,h,p){return a(),t("div",null,_)}var m=e(l,[["render",r]]);export{f as __pageData,m as default};
