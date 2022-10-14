@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a,a as o}from"./app.7e9cfa17.js";const m='{"title":"","description":"","frontmatter":{},"relativePath":"project/ui/index.md","lastUpdated":1638422989120}',s={},c=o("p",null,"\u64B0\u5199\u4E2D...",-1),n=[c];function r(p,_,d,i,l,f){return a(),t("div",null,n)}var x=e(s,[["render",r]]);export{m as __pageData,x as default};
