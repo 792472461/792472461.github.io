@@ -1,0 +1,1 @@
+import{_ as t,o as a,c as r}from"./app.57c057be.js";const e=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/backtracking.md"}');const i=t({name:"algorithm/backtracking.md"},[["render",function(t,e,i,n,o,c){return a(),r("div")}]]);export{e as __pageData,i as default};

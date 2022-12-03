@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as o}from"./app.57c057be.js";const r=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/leetcode/two-pointers.md"}');const a=e({name:"algorithm/leetcode/two-pointers.md"},[["render",function(e,r,a,s,i,n){return t(),o("div")}]]);export{r as __pageData,a as default};
