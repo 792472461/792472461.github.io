@@ -1,0 +1,1 @@
+import{_ as e,o as r,c as t}from"./app.fc422e22.js";const a=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/search.md"}');const s=e({name:"algorithm/search.md"},[["render",function(e,a,s,o,i,n){return r(),t("div")}]]);export{a as __pageData,s as default};

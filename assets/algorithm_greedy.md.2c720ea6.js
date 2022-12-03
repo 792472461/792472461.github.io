@@ -1,1 +1,0 @@
-import{_ as e,o as r,c as t}from"./app.57c057be.js";const a=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/greedy.md"}');const o=e({name:"algorithm/greedy.md"},[["render",function(e,a,o,s,d,i){return r(),t("div")}]]);export{a as __pageData,o as default};

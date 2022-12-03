@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as a}from"./app.fc422e22.js";const r=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/leetcode/stack.md"}');const o=e({name:"algorithm/leetcode/stack.md"},[["render",function(e,r,o,s,c,d){return t(),a("div")}]]);export{r as __pageData,o as default};

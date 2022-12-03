@@ -1,1 +1,0 @@
-import{_ as r,o as e,c as t}from"./app.57c057be.js";const a=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/recursion.md"}');const o=r({name:"algorithm/recursion.md"},[["render",function(r,a,o,s,i,n){return e(),t("div")}]]);export{a as __pageData,o as default};

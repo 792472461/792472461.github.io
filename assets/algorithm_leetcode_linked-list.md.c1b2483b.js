@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as r}from"./app.fc422e22.js";const a=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/leetcode/linked-list.md"}');const i=e({name:"algorithm/leetcode/linked-list.md"},[["render",function(e,a,i,o,s,d){return t(),r("div")}]]);export{a as __pageData,i as default};

@@ -1,0 +1,1 @@
+import{_ as e,o as t,c as r}from"./app.fc422e22.js";const a=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/leetcode/tree.md"}');const o=e({name:"algorithm/leetcode/tree.md"},[["render",function(e,a,o,s,d,i){return t(),r("div")}]]);export{a as __pageData,o as default};

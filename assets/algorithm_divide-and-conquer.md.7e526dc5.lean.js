@@ -1,0 +1,1 @@
+import{_ as e,o as r,c as t}from"./app.fc422e22.js";const a=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"algorithm/divide-and-conquer.md"}');const d=e({name:"algorithm/divide-and-conquer.md"},[["render",function(e,a,d,i,n,o){return r(),t("div")}]]);export{a as __pageData,d as default};
